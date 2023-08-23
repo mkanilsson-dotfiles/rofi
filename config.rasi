@@ -1,0 +1,83 @@
+configuration {
+    display-run: "Run:";
+    font: "JetBrainsMono Medium 10";
+    show-icons: false;
+}
+
+@theme "/dev/null"
+
+* {
+    /* Theme settings */
+    highlight: bold italic;
+    scrollbar: false;
+
+    /* Gruvbox dark colors */
+    bg:        #1d2021;
+    bg-alt:    #928374;
+    fg:        #fbf1c7;
+    fg-alt:    #d5c4a1;
+    blue-dark: #458588;
+
+    /* Theme colors */
+    background:                  @bg;
+    background-color:            @bg;
+
+    foreground:                  @fg;
+    border: 0;
+}
+
+window {
+    width: 45%;
+}
+
+element {
+    padding: 6;
+    text-color: @fg-alt;
+}
+
+element selected {
+    text-color: @fg;
+    background-color: @bg-alt;
+}
+
+element-text {
+    background-color: inherit;
+    text-color: inherit;
+    vertical-align: 0.5;
+}
+
+entry {
+    background-color: @blue-dark;
+    padding: 6;
+    text-color: @fg;
+}
+
+num-sep {
+    expand: false;
+    content: "/";
+}
+
+inputbar {
+    /* children: [prompt, entry, num-filtered-rows, num-sep, num-rows]; */
+    children: [prompt, entry];
+    background-color: @blue-dark;
+    text-color: @fg;
+}
+
+prompt {
+    background-color: @blue-dark;
+    padding: 6;
+    text-color: @fg;
+}
+
+num-rows, num-filtered-rows {
+    background-color: @blue-dark;
+    padding: 6;
+    text-color: @fg;
+}
+
+listview {
+    background-color: @bg;
+    colums: 1;
+    lines: 10;
+}
